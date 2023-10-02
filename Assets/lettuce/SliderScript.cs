@@ -6,11 +6,9 @@ using UnityEngine.UIElements;
 
 public class SliderScript : MonoBehaviour
 {
-    public SliderInt mainSlider;
     public void AmountWake(float value)
     {
         PlayerPrefs.SetFloat("LettuceAmount", value);
-        print(value);
     }
 
 }

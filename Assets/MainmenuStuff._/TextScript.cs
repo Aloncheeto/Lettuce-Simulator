@@ -3,24 +3,12 @@ using UnityEngine.UI;
 
 public class TextScript : MonoBehaviour
 {
-    private Slider slider;
-    private Text textComp;
+    public Text textComp;
 
-    void Awake()
-    {
-        slider = GetComponentInParent<Slider>();
-        textComp = GetComponent<Text>();
-    }
-
-    void Start()
-    {
-        UpdateText(slider.value);
-        slider.onValueChanged.AddListener(UpdateText);
-    }
 
     public void UpdateText(float val)
     {
-        //textComp.text = slider.value.ToString();
+        val = Mathf.FloorToInt(val);
         textComp.text = val.ToString();
     }
 }   
